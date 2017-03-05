@@ -6,3 +6,9 @@ export function toggleCell(cell) {
 		cell
 	};
 }
+
+export function propagateGame() {
+	return {
+		type: types.PROPAGATE
+	}
+}

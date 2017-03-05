@@ -9,3 +9,7 @@ it('create action to toggle cell', () => {
 	};
 	expect(actions.toggleCell(cell)).toEqual(expectedAction);
 });
+
+it('create action to propagate game', () => {
+	expect(actions.propagateGame()).toEqual({type: types.PROPAGATE});
+})

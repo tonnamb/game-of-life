@@ -1,24 +1,13 @@
 import matrix from './matrix';
 import * as types from '../actions/types';
+import initializeMatrix from '../algorithms/initializeMatrix';
 
 let squareList;
+let idRef;
 
 beforeEach(() => {
 
-	squareList = [];
-	let counter = 0;
-	
-	for (let j=0; j<40; j++) {
-		for (let i=0; i<70; i++) {
-			squareList.push({
-				id: counter, 
-				x: i*10, 
-				y: j*10, 
-				alive: false,
-				color: 'white'});
-			counter += 1;
-		}
-	}
+	[ squareList, idRef ] = initializeMatrix();
 
 });
 
@@ -33,6 +22,6 @@ it('TOGGLE_CELL: from default state', () => {
 		cell: targetCell
 	};
 	let expectedState = [ ...squareList ];
-	expectedState[targetCell] = {id: 0, x: 0, y: 0, alive: true, color: 'DeepSkyBlue'}
+	expectedState[targetCell] = {id: 0, x: 0, y: 0, alive: true}
 	expect(matrix(squareList, toggleAction)).toEqual(expectedState);
 });
