@@ -1,0 +1,1 @@
+export const TOGGLE_CELL = 'toggle_cell';
