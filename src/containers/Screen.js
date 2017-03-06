@@ -13,7 +13,7 @@ class Screen extends Component {
 	}
 
 	handleClick(cell, x, y) {
-		console.log([x/10, y/10]);
+		// console.log([x/10, y/10]);
 		this.props.toggleCell(cell);
 	}
 
@@ -38,8 +38,10 @@ class Screen extends Component {
 	renderSquares() {
 		return this.props.matrix.map((square) => {
 			return (
-				<Rect key={square.id} x={square.x} y={square.y} width={10} height={10}
-							stroke='black' strokeWidth={1} fill={square.alive ? 'DeepSkyBlue' : 'white'}
+				<Rect key={square.id} x={square.x} y={square.y}
+							width={10} height={10}
+							stroke='black' strokeWidth={1}
+							fill={square.alive ? 'DeepSkyBlue' : 'white'}
 							onClick={this.handleClick.bind(this, square.id, square.x, square.y)}
 							onMouseOver={this.handleMouseOver.bind(this, square.id)}
 				/>

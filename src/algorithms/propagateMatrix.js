@@ -1,7 +1,7 @@
 import countLiveNeigh from './countLiveNeigh';
 
 const propagateMatrix = (squareList, idRef) => {
-	let newList = [ ... squareList ];
+	let newList = JSON.parse(JSON.stringify(squareList));
 	const dimX = idRef.length;
 	const dimY = idRef[0].length;
 	let count;
