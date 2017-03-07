@@ -51,9 +51,9 @@ class Screen extends Component {
 
 	render() {
 		return (
-			<div className='main-screen' 
-					 onMouseDown={this.handleMouseDown.bind(this)}
-					 onMouseUp={this.handleMouseUp.bind(this)}
+			<div className='screen' 
+				 onMouseDown={this.handleMouseDown.bind(this)}
+				 onMouseUp={this.handleMouseUp.bind(this)}
 			>
 				<Stage width={700} height={400}>
 					<Layer>
@@ -68,7 +68,7 @@ class Screen extends Component {
 const mapStateToProps = (state) => {
 	return {
 		matrix: state.matrix
-	}
+	};
 }
 
 const mapDispatchToProps = (dispatch) => {

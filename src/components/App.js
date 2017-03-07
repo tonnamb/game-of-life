@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 import Screen from '../containers/Screen';
-import StartButton from '../containers/StartButton';
-import StopButton from '../containers/StopButton';
-import PropagateButton from '../containers/PropagateButton';
+import Controls from '../containers/Controls';
+import IterCounter from '../containers/IterCounter';
+import SampleStates from '../containers/SampleStates';
 
 class App extends Component {
 	render() {
 		return (
-			<div>
+			<div className="container">
 				<div className="page-header">
 					<h3>Conway's Game of Life - React.js Implementation</h3>
 				</div>
 				<Screen />
-				<div>
-					<StartButton />
-					<StopButton />
-					<PropagateButton />
-				</div>
+				<Controls />
+				<IterCounter />
+				<SampleStates />
+				<h4>Fork me on <a href="https://github.com/tonnamb/game-of-life">GitHub</a></h4>
 			</div>
 		);
 	}
